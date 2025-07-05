@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
+    "homepage": "https://your-username.github.io/your-repo-name",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
