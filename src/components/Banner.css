@@ -1,0 +1,267 @@
+
+/* Default */
+.Banner{
+     position: relative;
+     width: 100%;
+     height: max-content;
+     margin-top: 5rem;
+     z-index: 10;
+     overflow: hidden;
+}
+
+.bannerVideo{
+     width: 100%;
+}
+
+.Banner .bannerContent{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     justify-items: center;
+     align-content: center;
+     text-align: center;
+     /* Glassmorphic background */
+     background: radial-gradient(#0003, rgba(0, 0, 0, 0));
+     backdrop-filter: blur(1.5px);
+     -webkit-backdrop-filter: blur(3px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     z-index: 10;
+}
+
+.bannerContent h1{
+     text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+     color: white;
+     font-weight: bold;
+}
+
+.bannerContent p{
+     color: #fff;
+     text-align: center;
+     text-shadow: 0.6px 0.6px rgba(0, 0, 0, 0.3);
+}
+.actionControllers{
+     display: flex;
+     gap: 1.2rem;
+}
+.theme-btn-primary.ctaButton{
+     padding: 12px 21px;
+     margin-inline: auto;
+     animation: fadeUp 0.9s ease-in-out;
+     /* Glassmorphic button */
+     background: var(--primary-color);
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     border: 1px solid #563827;
+     border-radius: 12px;
+     color: white;
+     transition: all 0.3s ease;
+}
+.theme-btn-primary-reverse{
+     background: rgba(255, 255, 255, 0.3) !important;
+     border: 1px solid rgba(255, 255, 255, 0.9) !important;
+}
+.theme-btn-primary.ctaButton:hover {
+     background: rgba(255, 255, 255, 0.3);
+     border: 1px solid rgba(255, 255, 255, 0.9) !important;
+     transform: translateY(-2px);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.theme-btn-primary-reverse.ctaButton:hover {
+     transform: translateY(-2px);
+     background: var(--primary-color) !important;
+     border: 1px solid #563827 !important;
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeUp {
+     0%{transform: translateY(300px);opacity: 0;}
+     90%{transform: translateY(-9px)}
+     100%{transform: translateY(0px); opacity: 1;}
+}
+
+/* Floating Circles Animation */
+.floating-circles {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+     z-index: 9;
+}
+
+.circle {
+     position: absolute;
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(5px);
+     -webkit-backdrop-filter: blur(5px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     animation-timing-function: ease-in-out;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+}
+
+.circle-1 {
+     width: 80px;
+     height: 80px;
+     top: 20%;
+     left: 10%;
+     animation: float1 6s ease-in-out infinite;
+}
+
+.circle-2 {
+     width: 60px;
+     height: 60px;
+     top: 60%;
+     left: 80%;
+     animation: float2 4s ease-in-out infinite;
+}
+
+.circle-3 {
+     width: 40px;
+     height: 40px;
+     top: 30%;
+     left: 70%;
+     animation: float3 5s ease-in-out infinite;
+}
+
+.circle-4 {
+     width: 100px;
+     height: 100px;
+     top: 70%;
+     left: 20%;
+     animation: float4 7s ease-in-out infinite;
+}
+
+.circle-5 {
+     width: 50px;
+     height: 50px;
+     top: 10%;
+     left: 60%;
+     animation: float5 4.5s ease-in-out infinite;
+}
+
+.circle-6 {
+     width: 70px;
+     height: 70px;
+     top: 80%;
+     left: 60%;
+     animation: float6 5.5s ease-in-out infinite;
+}
+
+@keyframes float1 {
+     0%, 100% { transform: translateY(0px) translateX(0px); }
+     50% { transform: translateY(-20px) translateX(10px); }
+}
+
+@keyframes float2 {
+     0%, 100% { transform: translateY(0px) translateX(0px); }
+     50% { transform: translateY(15px) translateX(-15px); }
+}
+
+@keyframes float3 {
+     0%, 100% { transform: translateY(0px) translateX(0px); }
+     50% { transform: translateY(-25px) translateX(20px); }
+}
+
+@keyframes float4 {
+     0%, 100% { transform: translateY(0px) translateX(0px); }
+     50% { transform: translateY(10px) translateX(-10px); }
+}
+
+@keyframes float5 {
+     0%, 100% { transform: translateY(0px) translateX(0px); }
+     50% { transform: translateY(-15px) translateX(-20px); }
+}
+
+@keyframes float6 {
+     0%, 100% { transform: translateY(0px) translateX(0px); }
+     50% { transform: translateY(20px) translateX(15px); }
+}
+
+.contactIcons{
+     position: fixed;
+     right: 0;
+     top: 0;
+     /* Glassmorphic contact icons */
+     background: rgba(255, 255, 255, 0.15);
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     padding: 12px 15px;
+     border-radius: 15px;
+     margin-top: 18%;
+     margin-right: 20px;
+     z-index: 10;
+     transition: all 0.3s ease;
+}
+
+.contactIcons:hover {
+     background: rgba(255, 255, 255, 0.2);
+     transform: translateX(-5px);
+}
+
+.phone.contactIcon{
+     transform: rotate(0deg);
+     transition: transform 0.3s ease;
+}
+
+.phone.contactIcon:hover {
+     transform: rotate(10deg) scale(1.1);
+}
+
+.Whatsapp.contactIcon{
+     margin-top: 18px;
+     transition: transform 0.3s ease;
+}
+
+.Whatsapp.contactIcon:hover {
+     transform: rotate(-10deg) scale(1.1);
+}
+
+.contactIcon img {
+     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+     transition: filter 0.3s ease;
+}
+
+.contactIcon:hover img {
+     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 719px) {
+.contactIcons{
+          margin-right: 3px;
+          padding: 6px 9px;
+}
+.contactIcons{
+     margin-top: 30%;
+}
+.actionControllers{
+     margin-top: 0.3rem;
+}
+.circle {
+     opacity: 0.6;
+}
+.circle-1, .circle-4 {
+     display: none; 
+}
+}
+
+/* Large Screen */
+@media screen and (min-width: 720px) {
+     .Banner{
+          width: 100%;
+          height: 39dvw; 
+          overflow: hidden;
+     }
+     .bannerContent p{
+          width: 50%;
+          margin-bottom: 18px;
+     }
+     .bannerVideo{
+          position: relative;
+          width: 100%;
+     }
+}

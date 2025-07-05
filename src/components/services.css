@@ -1,0 +1,39 @@
+.services{
+     background: #ededed;
+}
+.serviceCard{
+     width: 100%;
+     padding: 3rem 2.1rem;
+     border-radius: 9px;
+     background: #fff;
+     transform: translateY(0px) scale(1);
+     transition: 0.21s ease-in;
+     overflow: hidden;
+     &:hover{
+          transform: translateY(-3px) scale(1.02);
+          filter: drop-shadow(3px 6px 6px #0003)
+     }
+}
+.serviceIcon{
+     margin-inline: auto;
+     width: 5rem;
+}
+.serviceCard h3{
+     margin-top: 0.9rem;
+}
+.serviceContent{
+     margin-block: 0.3rem 0.9rem;
+     text-align: start;
+}
+.learnMoreBtn{
+     font-weight: 600;
+     font-size: 1.2rem;
+     color: var(--primary-color);
+     text-decoration: none;
+     margin-top: 1.2rem;
+     cursor: pointer;
+     transition: 0.27 ease-in;
+     &:hover{
+          color: #000;
+     }
+}

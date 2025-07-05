@@ -1,0 +1,63 @@
+.whyChooseUs{
+     position: relative;
+     overflow: hidden;
+     z-index: 1;
+      &::before{
+     position: absolute;
+     content: '';
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     filter: blur(6px);
+     background: url("../assets/bg3.jpg");
+     background-size: cover;
+     background-position: center;
+     transform: scale(1.2);
+     z-index: -1;
+}
+}
+.whyChooseUs .gridRow{
+     background: rgba(255, 255, 255, 0.2);
+     border-radius: 6px;
+}     
+.whyChooseUs .gridRow .col2{
+     padding: 0px 3rem;
+}
+.whyChooseUs h2{
+     color: #fff;
+}
+.wcCard{
+     position: relative;
+     width: 100%;
+     padding: 3rem 2.1rem;
+     border-radius: 9px;
+     transition: 0.21s ease-in;
+     /* background: rgba(255, 255, 255, 0.2); */
+     overflow: hidden;
+     z-index: 1;
+}
+.highlilghts li{
+     position: relative;
+     font-weight: 500;
+     margin-bottom: 18px;
+     padding-left: 30px;
+     color: #fff;
+     &::before{
+          position: absolute;
+          content: "✔️";
+          left: 0;
+          top: 0;
+     }
+}
+.testimonials{
+     height: 100%;
+     display: block;
+     padding-right: 3vw;
+     align-content: end;
+}
+@media screen and (max-width: 719px) {
+     .whyChooseUs .gridRow .col2{
+          padding: 0px 3rem;
+     }
+}

@@ -1,0 +1,65 @@
+.testimonial-slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 0rem;
+}
+
+.testimonial-card {
+  position: relative;
+  width: 100%;
+  background: #0009;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff;
+  height: 100%;
+}
+
+.testimonial{
+     position: absolute;
+     bottom: 0;
+}
+.cardRow{
+     display: flex;
+     width: 100%;
+}
+.t_rating{
+     display: flex;
+     margin-left: auto;
+     justify-content: space-between;
+     gap: 6px;
+}
+.t_profile{
+     display: flex;
+     min-width: 45px;
+     height: 45px;
+     justify-self: center;
+     align-content: center;
+     border-radius: 50%;
+     overflow: hidden;
+}
+.userName{
+     display: flex;
+     align-items: center;
+     margin-left: 9px;
+}
+.t_message{
+     padding: 0.9rem 0rem;
+     text-align: left;
+     width: 100%;
+     color: #fff;
+}
+@media screen and (max-width: 719px) {
+     .t_profile{
+          min-width: 30px !important;
+          height: 30px;
+     }
+     .t_profile img{
+          width: 30px !important;
+          border-radius: 50%;
+          border: 3px solid #fff3;
+     }
+}

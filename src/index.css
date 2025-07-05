@@ -1,0 +1,113 @@
+/* Zilla Slab font */
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* reset default css */
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: var(--primary-font);
+}
+/* theme defaults */
+:root{
+     --primary-color: #694a38;
+     --primary-color-500: #694a3883;
+     --primary-color-300: #694a3855;
+     --secondary-color: #ededed;
+     --secondary-color-500: #ededed8d;
+     --secondary-color-300: #ededed48;
+     --primary-font: "Zilla Slab", serif;
+}
+/* font setup */
+h1, h2, h3, h4, h5, a{
+  font-weight: 500;
+  font-style: normal;
+}
+h1{
+     font-size: clamp(1.5rem,3vw, 2.4rem);
+}
+h2{
+     font-size: clamp(1.2rem,2.7vw, 2.1rem);
+}
+h3{
+     font-size: clamp(1rem,2.4vw, 1.8rem);
+     font-weight: 600;
+}
+h4{
+     font-size: clamp(0.9rem,2.1vw, 1.5rem);
+     font-weight: 600;
+}
+p, li{
+     font-size: clamp(0.9rem, 1.2vw, 3vw);
+}
+button{
+     font-size: clamp(0.9rem,1.5vw, 2rem);
+     font-weight: 600;
+}
+.text-white{
+  color: #fff;
+}
+.bg-theme{
+  background: #332218;
+}
+.text-theme{
+  color: #332218;
+}
+.gridRow{
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 1.2rem;
+     margin-top: 1.5rem;
+}
+.gridCol{
+     position: relative;
+     overflow: hidden;
+}
+/* theme buttons */
+.theme-btn-primary{
+  background: #fff;
+  padding: 8px 12px;
+  border: 1px solid #ffeed1;
+  border-radius: 3px;
+  font-size: clamp(0.9rem,1.5vw, 2rem);
+  font-weight: 600;
+  font-family: var(--primary-font);
+  cursor: pointer;
+}
+.btn-secondary{
+  background: var(--primary-color);
+  padding: 8px 12px;
+  border: 1px solid #ffeed1;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  cursor: pointer;
+}
+.font-semiBold{
+     font-weight: 600;
+}
+.text-center{
+     text-align: center;
+}
+/* deafult spacing */
+.my-1{margin-block: 0.6rem;}
+@media screen and (max-width: 719px) {
+     .theme-section-padding{
+          padding: 0.5rem 1.8rem;
+     }
+     .section-padding{
+          padding: 3rem 1.8rem;
+     }
+     .py-1{padding-block: 0.42rem;}
+}
+@media screen and (min-width: 719px) {
+     .theme-section-padding{
+          padding: 0.5rem 6rem;
+     }
+     .section-padding{
+          padding: 4.5rem 6rem;
+     }
+     .py-1{padding-block: 0.6rem;}
+}

@@ -1,0 +1,11 @@
+.App{
+     background: var(--secondary-color);
+     overflow: hidden;
+}
+a{
+     font-size: 0.9rem;
+     text-decoration: none;
+}
+ul li{
+     list-style-type: none;
+}
