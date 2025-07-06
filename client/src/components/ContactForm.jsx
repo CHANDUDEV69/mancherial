@@ -4,6 +4,7 @@ import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
 import { useEffect } from 'react'
 const ContactForm = () => {
+     console.log("ContactUs rendered");
      useEffect(() => {
   console.log("🚀 Running useEffect in ContactUs");
 
