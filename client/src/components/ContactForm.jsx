@@ -9,7 +9,7 @@ const ContactForm = () => {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("https://mancherial-production.up.railway.app/");
+      const res = await fetch("    ");
       const data = await res.json();
       console.log("✅ Message from fetch:", data);
     } catch (error) {
