@@ -10,7 +10,7 @@ import ContactForm from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
-  return (
+return (
     <div className='App'>
       <Header />
       <Banner />

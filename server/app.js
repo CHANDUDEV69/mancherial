@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 // Sample API route
-app.get('/api', (req, res) => {
+app.use('/', (req, res) => {
   res.json({ message: 'API working!' });
 });
 
@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, '../client/build');
   app.use(express.static(clientBuildPath));
 
-  app.get('/', (req, res) => {
+  app.get('/contact', (req, res) => {
     res.sendFile(path.resolve(clientBuildPath, 'index.html'));
   });
 }
