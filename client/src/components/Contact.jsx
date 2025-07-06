@@ -2,12 +2,12 @@ import "./ContactForm.css"
 import phone from "../assets/icons/telephone.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
-import axios from 'axios';
 import { useEffect } from 'react'
 const ContactUs = () => {
      useEffect(() => {
   const fetchData = async () => {
     try {
+     alert("booom")
       const res = await fetch("https://mancherial-production.up.railway.app/");
       const data = await res.json();
       console.log("✅ Message from fetch:", data);
