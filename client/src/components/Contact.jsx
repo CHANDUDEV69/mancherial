@@ -5,19 +5,25 @@ import envelope from "../assets/icons/envelope.svg";
 import { useEffect } from 'react'
 const ContactUs = () => {
      useEffect(() => {
+  console.log("🚀 Running useEffect in ContactUs");
+
   const fetchData = async () => {
     try {
-     alert("booom")
-      const res = await fetch("https://mancherial-production.up.railway.app/");
+      const res = await fetch("https://mancherial-production.up.railway.app/message");
       const data = await res.json();
       console.log("✅ Message from fetch:", data);
     } catch (error) {
-      console.error("❌ Fetch error:", error);
+      console.error("❌ Fetch failed:", {
+        message: error.message,
+        name: error.name,
+        stack: error.stack,
+      });
     }
   };
 
   fetchData();
 }, []);
+
 
 
      return <div className="ContactUs section-padding" id="ContactUs">
