@@ -2,7 +2,15 @@ import "./ContactForm.css"
 import phone from "../assets/icons/telephone.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
+import { useEffect } from "react";
 const ContactUs = () => {
+     useEffect(()=>{
+          const response = async () => {
+               const result = await fetch("https://mancherial-production.up.railway.app/");
+               console.log(result);
+          }
+          response();
+     })
      return <div className="ContactUs section-padding" id="ContactUs">
           <h2 className="text-white">Contact Us</h2>
           <div className="gridRow">
