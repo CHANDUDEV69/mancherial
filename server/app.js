@@ -1,8 +1,12 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
 const { default: connectDB } = require('./db');
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://mancherial.vercel.app/', // replace with actual Vercel domain
+}));
 
 dotenv.config();
 
