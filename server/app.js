@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 // Sample API route
-app.use('/', (req, res) => {
+app.get('/message', (req, res) => {
   res.json({ message: 'API working!' });
 });
 
