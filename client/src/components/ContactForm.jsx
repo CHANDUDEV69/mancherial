@@ -3,13 +3,14 @@ import phone from "../assets/icons/telephone.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
 import { useEffect } from 'react'
+import axios from "axios";
 const ContactForm = () => {
      useEffect(() => {
   console.log("🚀 Running useEffect in ContactUs");
 
   const fetchData = async () => {
     try {
-      const res = await fetch("https://mancherial-production.up.railway.app/");
+      const res = await axios.get("https://mancherial-production.up.railway.app/");
       const data = await res.json();
       console.log("✅ Message from fetch:", data);
     } catch (error) {
