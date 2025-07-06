@@ -2,21 +2,24 @@ import "./ContactForm.css"
 import phone from "../assets/icons/telephone.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
+import axios from 'axios';
 import { useEffect } from 'react'
 const ContactUs = () => {
-     useEffect(()=>{
-        const fetchData = async () => {
+     useEffect(() => {
+  const fetchData = async () => {
     try {
-      const response = await fetch("https://mancherial-production.up.railway.app/contact");
-      const data = await response.json();
-      console.log("✅ API Response:", data);
+      const res = await fetch("https://mancherial-production.up.railway.app/message");
+      const data = await res.json();
+      console.log("✅ Message from fetch:", data);
     } catch (error) {
       console.error("❌ Fetch error:", error);
     }
   };
 
   fetchData();
-        }, [])
+}, []);
+
+
      return <div className="ContactUs section-padding" id="ContactUs">
           <h2 className="text-white">Contact Us</h2>
           <div className="gridRow">
