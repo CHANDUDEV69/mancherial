@@ -5,9 +5,9 @@ import Banner from './components/Banner'
 import Services from './components/Services'
 import Whychooseus from './components/Whychooseus'
 import Projects from './components/Projects'
-import Blogs from './components/Blogs.jsx'
-import ContactForm from './components/Contact.jsx'
-import Footer from './components/Footer.jsx'
+import Blogs from './components/Blogs'
+import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 function App() {
 return (
