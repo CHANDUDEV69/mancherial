@@ -3,7 +3,7 @@ import phone from "../assets/icons/telephone.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
 import { useEffect } from 'react'
-const ContactUs = () => {
+const ContactForm = () => {
      useEffect(() => {
   console.log("🚀 Running useEffect in ContactUs");
 
@@ -95,4 +95,4 @@ const ContactUs = () => {
 
      </div>
 }
-export default ContactUs;
+export default ContactForm;
