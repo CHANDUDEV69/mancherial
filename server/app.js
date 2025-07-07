@@ -43,11 +43,14 @@ app.post('/contact', async (req, res) => {
       usermail,
       message,
       submittedAt: new Date(),
+    }).then((result)=>{
+      app.render("/thankyou");
+      console.log(result)
+    }).catch((err)=>{
+      console.log(err)
     });
 
-    // console.log("📥 Inserted contact:", { username, usermail, message });
-    app.render("/thankyou");
-    // res.redirect("https://mancherial-g6py.vercel.app/");
+
   } catch (err) {
     console.error("❌ Insert error:", err.message);
     res.status(500).json({ error: "Database insert failed" });
