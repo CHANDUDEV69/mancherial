@@ -1,8 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import path from 'path';
+import { getDB } from './db.js';
 import cors from 'cors';
 import connectDB from './db.js';
+import path from "path";
 import { fileURLToPath } from 'url';
 
 // Load environment variables
@@ -12,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
-await connectDB();
+const _db = await connectDB();
 
 // Middleware
 app.use(express.json());
@@ -39,20 +40,24 @@ app.get('/', (req, res, next) => {
 // const __dirname = path.dirname(__filename);
 
 // Serve React build in production
-// set to node_env to production
-
 
   // const clientBuildPath = path.join(__dirname, '../client/build');
   // app.use(express.static(clientBuildPath));
 
 app.post('/contact', (req, res) => {
   const { username, usermail, message } = req.body;
-  console.log("📩 Contact Form Submission:", { username, usermail, message });
-
-  // Optionally store to DB or send mail...
-
-  // res.redirect("https://mancherial-g6py.vercel.app/");
-});
+    if (!username || !usermail || !message) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
+  try{
+    getDB.collection("users").insertOne({username, usermail, message}).then(()=>{
+      res.redirect("https://mancherial-g6py.vercel.app/");
+    }).catch(err=>{console.log(err)})
+  }
+  catch(err){
+    console.log(err)
+  }
+})
 
 
 
