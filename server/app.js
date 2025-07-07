@@ -26,9 +26,10 @@ app.use(cors({
 
 
 // Sample API route
-app.get('/', (req, res) => {
+app.use('/', (req, res, next) => {
   // res.json({ message: 'API working!' });
-  console.log("backend API working!")
+  console.log("api is working");
+  next();
 });
 
 // Get __dirname equivalent in ESM
