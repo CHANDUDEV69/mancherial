@@ -42,7 +42,7 @@ app.post('/contact', async (req, res) => {
       username,
       usermail,
       message,
-      submittedAt: dateIST,
+      submittedAt: new Date(),
     });
 
     // console.log("📥 Inserted contact:", { username, usermail, message });
