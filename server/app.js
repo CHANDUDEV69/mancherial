@@ -44,7 +44,7 @@ app.post('/contact', async (req, res) => {
       message,
       submittedAt: new Date(),
     }).then((result)=>{
-      app.render("/thankyou");
+      res.render("/thankyou");
       console.log(result)
     }).catch((err)=>{
       console.log(err)
