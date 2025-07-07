@@ -17,7 +17,8 @@ await connectDB();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: process.env.CLIENT_URL || "https://mancherial-git-master-chandudev69s-projects.vercel.app" || "https://mancherial.vercel.app/",
+  origin: "https://mancherial-git-master-chandudev69s-projects.vercel.app/",
+  credentials: true,
 }));
 
 // Sample API route
