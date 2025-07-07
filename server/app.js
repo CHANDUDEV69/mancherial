@@ -32,8 +32,9 @@ app.get('/', (req, res, next) => {
 });
 
 // Get __dirname equivalent in ESM
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Serve React build in production
 // set to node_env to production
