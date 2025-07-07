@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.post('/contact', (req, res) => {
     console.log(req.body.username)
-  res.redirect("https://mancherial.vercel.app/");
+  // res.redirect("https://mancherial.vercel.app/");
     // res.sendFile(path.resolve(clientBuildPath, 'index.html'));
   });
 }
