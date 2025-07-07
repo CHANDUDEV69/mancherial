@@ -60,7 +60,6 @@ return <form className="ContactUs section-padding" id="ContactUs" method="post" 
 
                          <div className="adField">
                               <div>
-                                   {/* <img src={envelope} alt="" width="21px"/> */}
                                    <span className="font-semiBold">
                                    Location: 
                                    </span></div>
