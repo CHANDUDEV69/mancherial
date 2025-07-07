@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB, { getDB } from './db.js';
+import moment from 'moment-timezone';
 
 dotenv.config();
 const app = express();
@@ -13,7 +14,7 @@ await connectDB();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.set({"view engine": "ejs"});
 app.use(cors({
   origin: process.env.CLIENT_URL?.split(',') || [
     "https://mancherial-git-master-chandudev69s-projects.vercel.app",
@@ -31,6 +32,7 @@ app.post('/contact', async (req, res) => {
   const { username, usermail, message } = req.body;
 
   if (!username || !usermail || !message) {
+    const dateIST = moment().tz('Asia/kolkata').toDate();
     return res.status(400).json({ error: "All fields are required" });
   }
 
@@ -40,11 +42,12 @@ app.post('/contact', async (req, res) => {
       username,
       usermail,
       message,
-      submittedAt: new Date()
+      submittedAt: dateIST,
     });
 
-    console.log("📥 Inserted contact:", { username, usermail, message });
-    res.redirect("https://mancherial-g6py.vercel.app/");
+    // console.log("📥 Inserted contact:", { username, usermail, message });
+    app.render("/thankyou");
+    // res.redirect("https://mancherial-g6py.vercel.app/");
   } catch (err) {
     console.error("❌ Insert error:", err.message);
     res.status(500).json({ error: "Database insert failed" });
