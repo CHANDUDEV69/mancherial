@@ -16,6 +16,8 @@ await connectDB();
 
 // Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(cors({
   origin: process.env.CLIENT_URL?.split(',') || [
     "https://mancherial-git-master-chandudev69s-projects.vercel.app",
@@ -43,11 +45,15 @@ app.get('/', (req, res, next) => {
   // const clientBuildPath = path.join(__dirname, '../client/build');
   // app.use(express.static(clientBuildPath));
 
-  app.post('/contact', (req, res) => {
-    console.log(req.body.username)
+app.post('/contact', (req, res) => {
+  const { username, usermail, message } = req.body;
+  console.log("📩 Contact Form Submission:", { username, usermail, message });
+
+  // Optionally store to DB or send mail...
+
   res.redirect("https://mancherial.vercel.app/");
-    // res.sendFile(path.resolve(clientBuildPath, 'index.html'));
-  });
+});
+
 
 
 // Start server
