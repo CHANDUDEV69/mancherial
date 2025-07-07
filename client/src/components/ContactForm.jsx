@@ -39,14 +39,16 @@ return <form className="ContactUs section-padding" id="ContactUs" method="post" 
 
                          <div className="adField">
                               <div><img src={phone} alt="" width="21px"/> <span className="font-semiBold">Phone:</span></div>
-                              <div>+91 9876543210</div>
+                              <div>+91 79895 83538 <br />
+                              +91 9985599039</div>
                          </div>
 
                          <div className="adField">
                               <div><img src={whatsapp} alt="" width="21px"/><span className="font-semiBold">
                                    Whatsapp: 
                                    </span></div>
-                              <div>+91 9876543210</div>
+                                    <div>+91 79895 83538 <br />
+                              +91 9985599039</div>
                          </div>
 
                          <div className="adField">

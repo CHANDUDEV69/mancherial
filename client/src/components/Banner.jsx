@@ -15,8 +15,8 @@ const Banner = () => {
                     Mancherial's trusted interior design agency
                </p>
                <div className="actionControllers">
-                    <button className="theme-btn-primary ctaButton text-theme" tabIndex={1}>View Portfolio</button>
-                    <button className="theme-btn-primary theme-btn-primary-reverse ctaButton text-theme" tabIndex={1}>Book Consultation</button>
+                    <a href="#projects" className="theme-btn-primary ctaButton text-theme" tabIndex={1}>View Portfolio</a>
+                    <a href="#ContactUs" className="theme-btn-primary theme-btn-primary-reverse ctaButton text-theme" tabIndex={1}>Book Consultation</a>
 
                </div>
           </div>
@@ -33,12 +33,12 @@ const Banner = () => {
           
           <div className="contactIcons">
                <div className="phone contactIcon">
-                    <a href="tel:+919876543210">
+                    <a href="tel:+91 9985599039">
                          <img src={telephone} alt="" />
                     </a>
                </div>
                <div className="Whatsapp contactIcon">
-                    <a href="https://wa.me/+919876543210">
+                    <a href="https://wa.me/+91 79895 83538">
                          <img src={whatsapp} alt="" />
                     </a>
                </div>

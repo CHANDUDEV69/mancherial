@@ -10,9 +10,9 @@
 }
 /* theme defaults */
 :root{
-     --primary-color: #694a38;
-     --primary-color-500: #694a3883;
-     --primary-color-300: #694a3855;
+     --primary-color: #5f4acb;
+     --primary-color-500: #604acb84;
+     --primary-color-300: #604acb57;
      --secondary-color: #ededed;
      --secondary-color-500: #ededed8d;
      --secondary-color-300: #ededed48;
@@ -48,10 +48,10 @@ button{
   color: #fff;
 }
 .bg-theme{
-  background: #332218;
+  background: #5f4acb;
 }
 .text-theme{
-  color: #332218;
+  color: #5f4acb;
 }
 .gridRow{
      position: relative;
