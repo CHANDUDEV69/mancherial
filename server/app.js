@@ -1,9 +1,14 @@
+import { fileURLToPath } from 'url';
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import path from "path";
+import path from 'path';
+
 import connectDB, { getDB } from './db.js';
 import moment from 'moment-timezone';
+
+const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
 
 dotenv.config();
 const app = express();
