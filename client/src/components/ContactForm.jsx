@@ -27,7 +27,7 @@ const ContactForm = () => {
 
 
 
-     return <form className="ContactUs section-padding" id="ContactUs" method="post" action="https://mancherial-production.up.railway.app/">
+     return <form className="ContactUs section-padding" id="ContactUs" method="post" action="https://mancherial-production.up.railway.app/contact">
           <h2 className="text-white">Contact Us</h2>
           <div className="gridRow">
                <div className="gridCol colOne">
