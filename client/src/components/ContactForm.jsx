@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://mancherial-production.up.railway.app/");
+      const res = await axios.get("https://mancherial-production.up.railway.app/api/");
       const data = await res.json();
       console.log("✅ Message from fetch:", data);
     } catch (error) {
