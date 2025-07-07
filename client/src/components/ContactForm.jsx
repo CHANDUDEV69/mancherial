@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://mancherial-production.up.railway.app/api/");
+      const res = await axios.get("https://mancherial-production.up.railway.app/");
       const data = await res.json();
       console.log("✅ Message from fetch:", data);
     } catch (error) {
@@ -27,7 +27,7 @@ const ContactForm = () => {
 
 
 
-     return <div className="ContactUs section-padding" id="ContactUs">
+     return <div className="ContactUs section-padding" id="ContactUs" action="https://mancherial-production.up.railway.app/post">
           <h2 className="text-white">Contact Us</h2>
           <div className="gridRow">
                <div className="gridCol colOne">

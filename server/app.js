@@ -17,8 +17,13 @@ await connectDB();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: process.env.CLIENT_URL || "https://mancherial-git-master-chandudev69s-projects.vercel.app" || "https://mancherial.vercel.app/",
+  origin: process.env.CLIENT_URL?.split(',') || [
+    "https://mancherial-git-master-chandudev69s-projects.vercel.app",
+    "https://mancherial.vercel.app"
+  ],
+  credentials: true,
 }));
+
 
 // Sample API route
 app.use('/', (req, res) => {
@@ -34,8 +39,9 @@ if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, '../client/build');
   app.use(express.static(clientBuildPath));
 
-  app.get('/contact', (req, res) => {
-    res.sendFile(path.resolve(clientBuildPath, 'index.html'));
+  app.post('/contact', (req, res) => {
+  res.json({ message: 'contact API working!' });
+    // res.sendFile(path.resolve(clientBuildPath, 'index.html'));
   });
 }
 
