@@ -38,16 +38,16 @@ const __dirname = path.dirname(__filename);
 // Serve React build in production
 // set to node_env to production
 
-if (process.env.NODE_ENV === 'production') {
-  const clientBuildPath = path.join(__dirname, '../client/build');
-  app.use(express.static(clientBuildPath));
+
+  // const clientBuildPath = path.join(__dirname, '../client/build');
+  // app.use(express.static(clientBuildPath));
 
   app.post('/contact', (req, res) => {
     console.log(req.body.username)
   res.redirect("https://mancherial.vercel.app/");
     // res.sendFile(path.resolve(clientBuildPath, 'index.html'));
   });
-}
+
 
 // Start server
 app.listen(PORT, () => {
