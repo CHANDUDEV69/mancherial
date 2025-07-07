@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(clientBuildPath));
 
   app.post('/contact', (req, res) => {
-  res.json({ message: 'contact API working!' });
+    console.log(req.body.username)
   res.redirect("https://mancherial.vercel.app/");
     // res.sendFile(path.resolve(clientBuildPath, 'index.html'));
   });
