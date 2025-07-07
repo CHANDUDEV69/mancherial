@@ -5,29 +5,7 @@ import envelope from "../assets/icons/envelope.svg";
 import { useEffect } from 'react'
 import axios from "axios";
 const ContactForm = () => {
-     // useEffect(() => {
-//   console.log("🚀 Running useEffect in ContactUs");
-
-//   const fetchData = async () => {
-//     try {
-//       const res = await axios.post("https://mancherial-production.up.railway.app/contact", {username: username, usermail: usermail});
-//       const data = await res.json();
-//       console.log("✅ Message from fetch:", data);
-//     } catch (error) {
-//       console.error("❌ Fetch failed:", {
-//         message: error.message,
-//         name: error.name,
-//         stack: error.stack,
-//       });
-//     }
-//   };
-
-//   fetchData();
-// }, []);
-
-
-
-     return <form className="ContactUs section-padding" id="ContactUs" method="post" action="https://mancherial-production.up.railway.app/contact">
+return <form className="ContactUs section-padding" id="ContactUs" method="post" action="https://mancherial-production.up.railway.app/contact">
           <h2 className="text-white">Contact Us</h2>
           <div className="gridRow">
                <div className="gridCol colOne">

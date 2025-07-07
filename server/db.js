@@ -1,11 +1,12 @@
-import mongoose from 'mongoose';
-import {MongClient} from "mongodb";
+import { MongoClient } from "mongodb";
+
+let _db;
+
 const connectDB = async () => {
-  let _db;
   try {
-    const client = new MongClient(process.env.mongoDBURL);
+    const client = new MongoClient(process.env.mongoDBURL);
     await client.connect();
-    _db = client.db("macherial");
+    _db = client.db("mancherial"); // Correct DB name
     console.log("✅ MongoDB connected");
     return _db;
   } catch (err) {
@@ -14,7 +15,5 @@ const connectDB = async () => {
   }
 };
 
-export const getDB = () => {
-  return _db;
-}
+export const getDB = () => _db;
 export default connectDB;
