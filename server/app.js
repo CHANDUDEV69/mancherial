@@ -26,7 +26,7 @@ app.use(cors({
 
 
 // Sample API route
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ message: 'API working!' });
 });
 
@@ -41,6 +41,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.post('/contact', (req, res) => {
   res.json({ message: 'contact API working!' });
+  res.redirect("/");
     // res.sendFile(path.resolve(clientBuildPath, 'index.html'));
   });
 }
