@@ -51,7 +51,7 @@ app.post('/contact', (req, res) => {
 
   // Optionally store to DB or send mail...
 
-  res.redirect("https://mancherial.vercel.app/");
+  res.redirect("https://mancherial-g6py.vercel.app/");
 });
 
 
