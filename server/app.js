@@ -7,8 +7,8 @@ import path from 'path';
 import connectDB, { getDB } from './db.js';
 import moment from 'moment-timezone';
 
-const __dirname = path.dirname(__filename);
 const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 const app = express();
