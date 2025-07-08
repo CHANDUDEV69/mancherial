@@ -23,12 +23,12 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(cors({
-  origin: process.env.CLIENT_URL?.split(',') || [
-    "https://mancherial-git-master-chandudev69s-projects.vercel.app",
-    "https://mancherial.vercel.app"
-  ],
-  credentials: true,
+  origin: [
+    "https://mancherial.vercel.app",
+    "https://mancherial-git-master-chandudev69s-projects.vercel.app"
+  ]
 }));
+
 
 // Routes
 app.get('/', (req, res) => {
@@ -51,7 +51,7 @@ app.post('/contact', async (req, res) => {
       message,
       submittedAt: new Date(),
     }).then((result)=>{
-       res.status(200).json({message:"Successful"});
+      res.status(200).json({ message: "Successful" });
     }).catch((err)=>{
       console.log(err)
     });

@@ -28,13 +28,14 @@ console.log(res)
   if (res.ok) {
      const data = await res.json();
     setResponseStatus(true);
-    console.log(data)
     setFormData({ username: "", usermail: "", message: "" });
+    console.log(data)
   } else {
-    const errorData = await result.json();
+     const errorData = await res.json(); // Use 'res' not 'result'
     alert("❌ Failed: " + (errorData?.error || "Unknown error"));
   }
-} catch (err) {
+} 
+catch (err) {
   console.error("❌ Fetch failed:", err);
   alert("❌ Network error. Check your server or CORS.");
 }
