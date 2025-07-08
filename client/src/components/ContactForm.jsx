@@ -41,7 +41,7 @@ console.log(res)
 
 
      }
-return <form className="ContactUs section-padding" id="ContactUs" onSubmit={formSubmitionHandler}>
+return <div className="ContactUs section-padding" id="ContactUs" onSubmit={formSubmitionHandler}>
           <h2 className="text-white">Contact Us</h2>
           {!responseStatus && <div className="gridRow">
                <div className="gridCol colOne">
@@ -117,6 +117,6 @@ return <form className="ContactUs section-padding" id="ContactUs" onSubmit={form
                </p>
           </div>}
 
-     </form>
+     </div>
 }
 export default ContactForm;
