@@ -6,7 +6,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 const ContactForm = () => {
-     const [formData, setFormData] = useState({username: "", usermail: "", message: ""});
+     const [formData, setFormData] = useState({username: "test", usermail: "test@mgm.com", message: "test message"});
      const [responseStatus, setResponseStatus] = useState(false);
      useEffect(()=>{
           
