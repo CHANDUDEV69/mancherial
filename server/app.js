@@ -51,7 +51,7 @@ app.post('/contact', async (req, res) => {
       message,
       submittedAt: new Date(),
     }).then((result)=>{
-       res.status(200).send("Successful");
+       return res.status(200);
     }).catch((err)=>{
       console.log(err)
     });
