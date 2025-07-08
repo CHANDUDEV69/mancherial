@@ -33,8 +33,8 @@ app.get('/', (req, res) => {
 app.post('/contact', async (req, res) => {
   const { username, usermail, message } = req.body;
 
+  const dateIST = moment().tz('Asia/kolkata').toDate();
   if (!username || !usermail || !message) {
-    const dateIST = moment().tz('Asia/kolkata').toDate();
     return res.status(400).json({ error: "All fields are required" });
   }
 
