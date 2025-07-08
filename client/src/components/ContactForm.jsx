@@ -19,14 +19,16 @@ const ContactForm = () => {
      async function formSubmitionHandler(e){
           e.preventDefault();
          try {
-  const result = await fetch("https://mancherial-production.up.railway.app/contact", {
+  const res = await fetch("https://mancherial-production.up.railway.app/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData)
   });
-console.log(result)
-  if (result.ok) {
+console.log(res)
+  if (res.ok) {
+     const data = await res.json();
     setResponseStatus(true);
+    console.log(data)
     setFormData({ username: "", usermail: "", message: "" });
   } else {
     const errorData = await result.json();
@@ -39,7 +41,7 @@ console.log(result)
 
 
      }
-return <form className="ContactUs section-padding" id="ContactUs" method="post" onSubmit={formSubmitionHandler}>
+return <form className="ContactUs section-padding" id="ContactUs" onSubmit={formSubmitionHandler}>
           <h2 className="text-white">Contact Us</h2>
           {!responseStatus && <div className="gridRow">
                <div className="gridCol colOne">
