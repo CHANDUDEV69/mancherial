@@ -4,10 +4,12 @@ import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
 import axios from "axios";
 import { useState } from "react";
+import { useEffect } from "react";
 const ContactForm = () => {
      const [formData, setFormData] = useState({username: "", usermail: "", message: ""});
      const [responseStatus, setResponseStatus] = useState(false);
-     function inputChangeHandler(e){
+     useEffect(()=>{
+function inputChangeHandler(e){
           setFormData((prev)=>{
                return {...prev, [e.target.name]: e.target.value}
           })
@@ -27,6 +29,7 @@ const ContactForm = () => {
                setResponseStatus(false);
           }
      }
+     })
 return <form className="ContactUs section-padding" id="ContactUs" method="post" onSubmit={formSubmitionHandler}>
           <h2 className="text-white">Contact Us</h2>
           {!responseStatus && <div className="gridRow">
