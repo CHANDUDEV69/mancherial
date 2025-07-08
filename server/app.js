@@ -22,12 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(cors({
-  origin: [
-    "https://mancherial.vercel.app",
-    "https://mancherial-git-master-chandudev69s-projects.vercel.app"
-  ]
-}));
+app.use(cors());
 
 
 // Routes
