@@ -51,8 +51,7 @@ app.post('/contact', async (req, res) => {
       message,
       submittedAt: new Date(),
     }).then((result)=>{
-      res.render("thankyou");
-      console.log(result)
+       res.status(200).json({ message: "Form submitted successfully!" });
     }).catch((err)=>{
       console.log(err)
     });

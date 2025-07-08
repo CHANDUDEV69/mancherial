@@ -9,27 +9,36 @@ const ContactForm = () => {
      const [formData, setFormData] = useState({username: "", usermail: "", message: ""});
      const [responseStatus, setResponseStatus] = useState(false);
      useEffect(()=>{
-function inputChangeHandler(e){
+          
+     })
+     function inputChangeHandler(e){
           setFormData((prev)=>{
                return {...prev, [e.target.name]: e.target.value}
           })
      }
      async function formSubmitionHandler(e){
           e.preventDefault();
-          const result = await fetch("https://mancherial-production.up.railway.app/contact",{
-               method: "POST",
-               headers: {"Content-Type": "application/json"},
-               body: JOSN.stringify(formData)
-               })
-          if(result.ok){
-               setResponseStatus(true);
-               setFormData({ username: "", usermail: "", message: "" });
-          } 
-          else{
-               setResponseStatus(false);
-          }
+         try {
+  const result = await fetch("https://mancherial-production.up.railway.app/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  });
+
+  if (result.ok) {
+    setResponseStatus(true);
+    setFormData({ username: "", usermail: "", message: "" });
+  } else {
+    const errorData = await result.json();
+    alert("❌ Failed: " + (errorData?.error || "Unknown error"));
+  }
+} catch (err) {
+  console.error("❌ Fetch failed:", err);
+  alert("❌ Network error. Check your server or CORS.");
+}
+
+
      }
-     })
 return <form className="ContactUs section-padding" id="ContactUs" method="post" onSubmit={formSubmitionHandler}>
           <h2 className="text-white">Contact Us</h2>
           {!responseStatus && <div className="gridRow">
