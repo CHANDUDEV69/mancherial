@@ -44,7 +44,7 @@ app.post('/contact', async (req, res) => {
       username,
       usermail,
       message,
-      submittedAt: new Date(),
+      submittedAt: dateIST,
     }).then((result)=>{
       res.status(200).json({ message: "Successful" });
     }).catch((err)=>{

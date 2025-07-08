@@ -43,8 +43,11 @@ catch (err) {
 
      }
 return <form className="ContactUs section-padding" id="ContactUs" onSubmit={formSubmitionHandler}>
-          <h2 className="text-white">Contact Us</h2>
-          {!responseStatus && <div className="gridRow">
+     
+     {!responseStatus && 
+          <div>
+               <h2 className="text-white">Contact Us</h2>
+               <div className="gridRow">
                <div className="gridCol colOne">
                     <div className="contactForm">
                     <h3 className="text-white">Let’s Start Your Dream Home Today</h3>
@@ -108,12 +111,13 @@ return <form className="ContactUs section-padding" id="ContactUs" onSubmit={form
                     </div>
                     </div>
                </div>
+          </div>
           </div>}
           {responseStatus && <div className="thankYouMessage">
-               <h3>
+               <h3 className="text-white text-center">
                     Thank You
                </h3>
-               <p>
+               <p className="text-white text-center py-1">
                     Your message has been received. We'll get back to you soon.
                </p>
           </div>}
