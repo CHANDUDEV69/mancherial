@@ -2,12 +2,34 @@ import "./ContactForm.css"
 import phone from "../assets/icons/telephone.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
 import envelope from "../assets/icons/envelope.svg";
-import { useEffect } from 'react'
 import axios from "axios";
+import { useState } from "react";
 const ContactForm = () => {
-return <form className="ContactUs section-padding" id="ContactUs" method="post" action="https://mancherial-production.up.railway.app/contact">
+     const [formData, setFormData] = useState({username: "", usermail: "", message: ""});
+     const [responseStatus, setResponseStatus] = useState(false);
+     function inputChangeHandler(e){
+          setFormData((prev)=>{
+               return {...prev, [e.target.name]: e.target.value}
+          })
+     }
+     async function formSubmitionHandler(e){
+          e.preventDefault();
+          const result = await fetch("https://mancherial-production.up.railway.app/contact",{
+               method: "POST",
+               headers: {"Content-Type": "application/json"},
+               body: JOSN.stringify(formData)
+               })
+          if(result.ok){
+               setResponseStatus(true);
+               setFormData({ username: "", usermail: "", message: "" });
+          } 
+          else{
+               setResponseStatus(false);
+          }
+     }
+return <form className="ContactUs section-padding" id="ContactUs" method="post" onSubmit={formSubmitionHandler}>
           <h2 className="text-white">Contact Us</h2>
-          <div className="gridRow">
+          {!responseStatus && <div className="gridRow">
                <div className="gridCol colOne">
                     <div className="contactForm">
                     <h3 className="text-white">Let’s Start Your Dream Home Today</h3>
@@ -16,13 +38,13 @@ return <form className="ContactUs section-padding" id="ContactUs" method="post" 
                     </p>
                     <div className="formLayout">
                          <div className="form-control">
-                              <input type="text" name="username" id="username" placeholder="Your Name" required/>
+                              <input type="text" name="username" id="username" placeholder="Your Name" value={formData.username} onChange={inputChangeHandler} required/>
                          </div>
                          <div className="form-control">
-                              <input type="email" name="usermail" id="usermail" placeholder="Your Email" required/>
+                              <input type="email" name="usermail" id="usermail" placeholder="Your Email" value={formData.usermail} onChange={inputChangeHandler} required/>
                          </div>
                          <div className="form-control full">
-                              <input type="text" name="message" id="message" placeholder="message" required/>
+                              <input type="text" name="message" id="message" placeholder="message" value={formData.message} onChange={inputChangeHandler} required/>
                          </div>
                     </div>
                              <div className="form-control btn-control">
@@ -71,7 +93,15 @@ return <form className="ContactUs section-padding" id="ContactUs" method="post" 
                     </div>
                     </div>
                </div>
-          </div>
+          </div>}
+          {responseStatus && <div className="thankYouMessage">
+               <h3>
+                    Thank You
+               </h3>
+               <p>
+                    Your message has been received. We'll get back to you soon.
+               </p>
+          </div>}
 
      </form>
 }
