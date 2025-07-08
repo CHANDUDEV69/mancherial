@@ -24,7 +24,7 @@ const ContactForm = () => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData)
   });
-
+console.log(result)
   if (result.ok) {
     setResponseStatus(true);
     setFormData({ username: "", usermail: "", message: "" });
