@@ -8,9 +8,6 @@ import { useEffect } from "react";
 const ContactForm = () => {
      const [formData, setFormData] = useState({username: "", usermail: "", message: ""});
      const [responseStatus, setResponseStatus] = useState(false);
-     useEffect(()=>{
-          
-     })
      function inputChangeHandler(e){
           setFormData((prev)=>{
                return {...prev, [e.target.name]: e.target.value}

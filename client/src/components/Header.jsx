@@ -20,11 +20,12 @@ const Header = () => {
                     <span className="line line3"></span>
                </div>
                <ul className="navLinks">
-                    <li><a href="#services" tabIndex={1}>WHAT WE DO</a></li>
-                    <li><a href="#whychooseus" tabIndex={1}>WHY CHOOSE US</a></li>
-                    <li><a href="#projects" tabIndex={1}>PROJECTS</a></li>
-                    <li><a href="#blogs" tabIndex={1}>BLOGS</a></li>
-                    <li><a href="#ContactUs" className="end" tabIndex={1}>CONTACT</a></li>
+                    <li><a href="/#services" tabIndex={1}>WHAT WE DO</a></li>
+                    <li><a href="/#whychooseus" tabIndex={1}>WHY CHOOSE US</a></li>
+                    <li><a href="/#projects" tabIndex={1}>PROJECTS</a></li>
+                    <li><Link to="/cities" tabIndex={1}>CITIES</Link></li>
+                    <li><a href="/#blogs" tabIndex={1}>BLOGS</a></li>
+                    <li><a href="/#ContactUs" className="end" tabIndex={1}>CONTACT</a></li>
                </ul>
           </nav>
      </header>

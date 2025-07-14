@@ -1,24 +1,19 @@
 import './App.css'
-import { useState } from 'react'
+import Modal from './components/util/Modal';
 import Header from './components/Header'
-import Banner from './components/Banner'
-import Services from './components/Services'
-import Whychooseus from './components/Whychooseus'
-import Projects from './components/Projects'
-import Blogs from './components/Blogs'
-import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
-
+import { useState } from 'react';
+import { Outlet } from 'react-router-dom'
 function App() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 return (
-    <div className='App'>
+    <div className='App' onLoad={() => setTimeout(()=>{
+        setIsModalOpen(true)
+    }, 3000) 
+    }>
       <Header />
-      <Banner />
-      <Services />
-      <Whychooseus />
-      <Projects />
-      <Blogs  />
-      <ContactForm />
+      <Outlet />
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></Modal>
       <Footer />
     </div>
   )

@@ -1,0 +1,26 @@
+.Section-Banner{
+     margin-top: 90px;
+     background-image: url("../assets/bannerbg.jpg");
+     height: 510px;
+     background-size: cover;
+     background-position: center;
+     display: flex;
+}
+.SBContent{
+     max-width: 660px;
+     height: max-content;
+     margin: auto;
+     text-align: center;
+     background-color: #0009;
+     background-image: radial-gradient(#0000, #0003);
+     padding: 3rem;
+     border-radius: 0.9rem;
+     /* border: 1px solid #fff; */
+}
+.SBContent h3{
+     margin-bottom: 0.6rem;
+}
+.ctaButton{
+     margin-top: 1.8rem;
+     width: max-content;
+}

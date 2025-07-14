@@ -91,6 +91,12 @@ button{
 .text-center{
      text-align: center;
 }
+.text-medium{
+     font-size: 1.2rem;
+}
+.font-500{
+     font-weight: 500;
+}
 /* deafult spacing */
 .my-1{margin-block: 0.6rem;}
 @media screen and (max-width: 719px) {
