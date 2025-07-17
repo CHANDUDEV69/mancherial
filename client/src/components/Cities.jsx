@@ -4,7 +4,6 @@ import CityImg from "../assets/bgsmall.jpg"
 export default function Cities(){
      return <>
           <SectionBanner />
-          
           <div className="cities section-padding">
                <h3 className="text-center">
                     Explore 51,040+ Interior Design Possibilities At Our Experience Centers

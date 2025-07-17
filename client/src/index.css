@@ -117,3 +117,7 @@ button{
      }
      .py-1{padding-block: 0.6rem;}
 }
+.Form .thankYouMessage{
+     align-content: center;
+     margin-top: 18%;
+}
