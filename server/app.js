@@ -3,7 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path';
-import { sitemapRouter } from './sitemap';
+import { sitemapRouter } from './sitemap.js';
 
 
 import connectDB, { getDB } from './db.js';
