@@ -3,6 +3,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path';
+import { sitemapRouter } from 'sitemap';
+
 
 import connectDB, { getDB } from './db.js';
 import moment from 'moment-timezone';
@@ -18,6 +20,7 @@ const PORT = process.env.PORT || 5000;
 await connectDB();
 
 // Middleware
+app.use('/', sitemapRouter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
