@@ -3,7 +3,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path';
-import { sitemapRouter } from './sitemap.js';
+
+const sitemapRouter = require('./sitemap');
+
 
 
 import connectDB, { getDB } from './db.js';
