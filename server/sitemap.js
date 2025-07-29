@@ -32,4 +32,4 @@ router.get('/sitemap.xml', (req, res) => {
     });
 });
 
-module.exports = router;
+export const sitemapRouter =  router;
