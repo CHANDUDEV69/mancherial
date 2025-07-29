@@ -1,6 +1,7 @@
-const { SitemapStream, streamToPromise } = require('sitemap');
-const { createGzip } = require('zlib');
-const express = require('express');
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { createGzip } from 'zlib';
+import express from 'express';
+
 const router = express.Router();
 
 const links = [
@@ -32,4 +33,4 @@ router.get('/sitemap.xml', (req, res) => {
     });
 });
 
-export const sitemapRouter =  router;
+export const sitemapRouter = router;
