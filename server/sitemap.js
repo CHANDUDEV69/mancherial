@@ -15,6 +15,9 @@ const links = [
   { url: '/blog', changefreq: 'weekly', priority: 0.6 },
 ];
 
+// URL of your logo image
+const logoUrl = 'https://www.mancherialinteriors.com/assets/logo.png';
+
 router.get('/sitemap.xml', (req, res) => {
   res.header('Content-Type', 'application/xml');
   res.header('Content-Encoding', 'gzip');
@@ -22,7 +25,26 @@ router.get('/sitemap.xml', (req, res) => {
   const smStream = new SitemapStream({ hostname: 'https://www.mancherialinteriors.com' });
   const pipeline = smStream.pipe(createGzip());
 
-  links.forEach(link => smStream.write(link));
+  // Loop through the links and add the logo image on the homepage (or anywhere you want)
+  links.forEach(link => {
+    smStream.write(link);
+
+    // Add image to the homepage or any specific URL
+    if (link.url === '/') {  // This is where you include the logo (for homepage in this case)
+      smStream.write({
+        url: link.url,
+        changefreq: link.changefreq,
+        priority: link.priority,
+        'image:image': [
+          {
+            'image:loc': logoUrl,
+            'image:caption': 'Mancherial Interiors Logo', // Add any caption or description
+          }
+        ]
+      });
+    }
+  });
+
   smStream.end();
 
   streamToPromise(pipeline)
