@@ -34,10 +34,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/contact', async (req, res) => {
-  const { username, usermail, message } = req.body;
+  const { username, userPhone, userWtsp, message } = req.body;
 
   const dateIST = moment().tz('Asia/kolkata').format('YYYY-MM-DD HH:mm:ss');
-  if (!username || !usermail || !message) {
+  if (!username || !userPhone || !message || !userWtsp) {
     return res.status(400).json({ error: "All fields are required" });
   }
 
