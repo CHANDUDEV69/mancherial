@@ -45,7 +45,7 @@ return <div className="ContactUs section-padding" id="ContactUs">
                                    <span className="font-semiBold">
                                    Location: 
                                    </span></div>
-                              <div>Near XYZ Landmark, <br />
+                              <div>Surya nagar road number 16, <br />
                                    Mancherial, Telangana</div>
                          </div>
 
