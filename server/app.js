@@ -45,7 +45,8 @@ app.post('/contact', async (req, res) => {
     const db = getDB();
     await db.collection("users").insertOne({
       username,
-      usermail,
+      userPhone,
+      userWtsp,
       message,
       submittedAt: dateIST,
     }).then((result)=>{
