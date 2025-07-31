@@ -23,7 +23,6 @@
      background: radial-gradient(#0003, rgba(0, 0, 0, 0));
      backdrop-filter: blur(1.5px);
      -webkit-backdrop-filter: blur(3px);
-     border: 1px solid rgba(10, 3, 65, 0.703);
      z-index: 10;
 }
 

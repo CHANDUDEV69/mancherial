@@ -15,8 +15,8 @@ import { useEffect, useState } from "react"
 
 const projectsData = [
           {name: "residential", "imgs": [img1, img2, img3, img4, img5]},
-          {name: "commericial", "imgs": [img9, img6, img3, img5]},
-          {name: "retail", "imgs": [img1, img7, img3, img4, img5, img6]},
+          {name: "commericial", "imgs": [img3, img5]},
+          {name: "retail", "imgs": [img1, img3, img4, img5, img6]},
           {name: "hospital", "imgs": [img1, img8, img9, img4, img5]}]
 
 const Projects = () => {
@@ -40,7 +40,7 @@ const Projects = () => {
      
      return <div className="projects section-padding" id="projects">
           <h2 tabIndex={1}>Projects</h2>
-          <div className="projectTabs" id="projectTabs" >
+          <div className="projectTabs" id="projectTabs">
                {projectsData.map((project, index)=>{
                     return <button key={index} onClick={(e) => { 
                          const allTabs = document.querySelectorAll(".tab");
