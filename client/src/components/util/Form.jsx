@@ -4,7 +4,6 @@ const Form = () => {
   const [formData, setFormData] = useState({
     username: "",
     userPhone: "",
-    userWtsp: "",
     userMail: "", // Uncomment when using email field
     message: "",
   });
@@ -17,7 +16,7 @@ const Form = () => {
   }
   function mobileValidation(e){
     const {name , value} = e.target;
-    if(name === "userPhone" || name === "userWtsp"  && /^[0-9]{0,10}$/.test(value)){
+    if(name === "userPhone" && /^[0-9]{0,10}$/.test(value)){
       setFormData((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
       });
@@ -44,7 +43,6 @@ const Form = () => {
         setFormData({
           username: "",
           userPhone: "",
-          userWtsp: "",
           userMail: "", // Reset email if needed
           message: "",
         });
@@ -74,7 +72,7 @@ const Form = () => {
                 type="text"
                 name="username"
                 id="username"
-                placeholder="Your Name"
+                placeholder="Your Full Name"
                 value={formData.username}
                 onChange={inputChangeHandler}
                 required
@@ -93,7 +91,7 @@ const Form = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            {/* <div className="form-control">
               <input
                 type="tel"
                 name="userWtsp"
@@ -105,8 +103,7 @@ const Form = () => {
                 title="Phone number must be 10 digits"
                 required
               />
-            </div>
-            {/* Uncomment when using email */}
+            </div> */}
             <div className="form-control full">
               <input
                 type="text"
