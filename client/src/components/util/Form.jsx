@@ -15,7 +15,14 @@ const Form = () => {
       return { ...prev, [e.target.name]: e.target.value };
     });
   }
-
+  function mobileValidation(e){
+    const {name , value} = e.target;
+    if(name === "userPhone" || name === "userWtsp"  && /^[0-9]{0,10}$/.test(value)){
+      setFormData((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+      });
+    }
+  }
   async function formSubmitionHandler(e) {
     e.preventDefault();
     // Client-side validation
@@ -75,12 +82,14 @@ const Form = () => {
             </div>
             <div className="form-control">
               <input
-                type="tel"
+                type="number"
                 name="userPhone"
                 id="userPhone"
                 placeholder="Your Phone Number"
                 value={formData.userPhone}
-                onChange={inputChangeHandler}
+                onChange={mobileValidation}
+                pattern="\d{10}" 
+                title="Phone number must be 10 digits"
                 required
               />
             </div>
@@ -91,7 +100,9 @@ const Form = () => {
                 id="userWtsp"
                 placeholder="Your Whatsapp Number"
                 value={formData.userWtsp}
-                onChange={inputChangeHandler}
+                onChange={mobileValidation} 
+                pattern="\d{10}" 
+                title="Phone number must be 10 digits"
                 required
               />
             </div>
