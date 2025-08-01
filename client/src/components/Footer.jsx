@@ -31,7 +31,7 @@ const Footer = () => {
                <div className="gridCol">
                     <h3 className="text-white">Useful Links</h3>
                     <ul className="siteLinks">
-                         <li><a href="/sitemap">SITE MAP</a></li>
+                         <li><a href="/sitemap.xml">SITE MAP</a></li>
                          <li><a href="/termsnconditions">TERMS AND CONDITOINS</a></li>
                          <li><a href="/feedback">FEEDBACK</a></li>
                     </ul>
