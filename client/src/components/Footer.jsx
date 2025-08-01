@@ -13,7 +13,8 @@ const Footer = () => {
                               "We believe every space has a story — our mission is to bring that story to life through timeless, thoughtful design."
                          </p>
                          <p>
-                              Near XYZ Landmark, Mancherial, Telangana
+                              Surya nagar road number 16, <br />
+                              Mancherial, Telangana
                          </p>
                     </div>
                </div>

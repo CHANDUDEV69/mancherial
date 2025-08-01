@@ -9,7 +9,7 @@ function App() {
 return (
     <div className='App' onLoad={() => setTimeout(()=>{
         setIsModalOpen(true)
-    }, 3000) 
+    }, 6000) 
     }>
       <Header />
       <Outlet />
