@@ -91,19 +91,7 @@ const Form = () => {
                 required
               />
             </div>
-            {/* <div className="form-control">
-              <input
-                type="tel"
-                name="userWtsp"
-                id="userWtsp"
-                placeholder="Your Whatsapp Number"
-                value={formData.userWtsp}
-                onChange={mobileValidation} 
-                pattern="\d{10}" 
-                title="Phone number must be 10 digits"
-                required
-              />
-            </div> */}
+        
             <div className="form-control full">
               <input
                 type="text"

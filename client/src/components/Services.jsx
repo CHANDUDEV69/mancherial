@@ -1,6 +1,7 @@
 import "./services.css"
 import kitchen from "../assets/icons/kitchen.png"
 import living from "../assets/icons/living.png"
+import furniture from "../assets/icons/furniture.png"
 import commercial from "../assets/icons/commercial.png"
 const Services = () => {
      return <div className="services section-padding" id="services">
@@ -9,88 +10,47 @@ const Services = () => {
                <div className="gridCol">
                     <div className="serviceCard">
                          <div className="serviceIcon">
-                              <img src={kitchen} alt="kitchen icon" width="100%"/>
+                              <img src={living} alt="living room icon" width="100%"/>
                          </div>
-                         <h3 tabIndex={1}>
-                              Design Consultation
+                         <h3 tabIndex={1} aria-label="Full Home Interior Design" aria-describedby="FullHomeInteriorDesc">
+                              Full Home Interior Design
                          </h3>
-                         <p className="serviceContent">
-                              Explore your vision with a single-session consultation to discuss style, layout & budget. Perfect if you're seeking direction or working on a focused space like a bedroom or kitchen. 
+                         <p className="serviceContent" id="FullHomeInteriorDesc">
+                              Transform your house into a dream home with our comprehensive Full Home Interior Design solutions. At Mancherial Interiors, we specialize in creating beautiful, functional, and personalized living spaces that reflect your lifestyle, taste, and needs 
                          </p>
-                         <a href="#" className="learnMoreBtn">Learn More</a>
+       
+                         <a href="#" className="learnMoreBtn">Book Now</a>
                     </div>
                </div>
                <div className="gridCol">
                     <div className="serviceCard">
                          <div className="serviceIcon">
-                              <img src={living} alt="living room icon" width="100%"/>
+                              <img src={kitchen} alt="kitchen icon" width="100%"/>
                          </div>
-                         <h3 tabIndex={1}>
-                              Concept & Visual Planning
+                         <h3 tabIndex={1} aria-label="Modular Kitchen" aria-describedby="modularKitchenDescription">
+                              Modular Kitchen
                          </h3>
-                         <p className="serviceContent">
-                              We translate your ideas into design reality through mood boards, sketches, and 2D/3D renderings. This lets you see your space before we build it. 
+                         <p className="serviceContent" id="modularKitchenDescription">
+                              At Mancherial Interiors, we blend functionality with finesse. From 3D kitchen design to on-site installation, our modular kitchens combine impeccable design, cutting‑edge functionality, and quality craftsmanship to elevate your culinary space. we offer customized modular kitchens tailored to your needs, taste, and budget.
                          </p>
-                         <a href="#" className="learnMoreBtn">Learn More</a>
+                         <a href="#" className="learnMoreBtn">Book Now</a>
                          </div>
                </div>
                <div className="gridCol">
                     <div className="serviceCard">
                     <div className="serviceIcon">
-                              <img src={commercial} alt="buildings icon" width="100%"/>
+                              <img src={furniture} alt="buildings icon" width="100%"/>
                     </div>
-                    <h3 tabIndex={1}> 
-                         Space Planning & Layout Design
+                    <h3 tabIndex={1} aria-label="Living Room & Bedroom Design" aria-describedby="LivingRoomBedroomDesc"> 
+                         Living Room & Bedroom Design
                     </h3>
-                    <p className="serviceContent">
-                         Maximize comfort and flow with smart floor‑plans tailored to your lifestyle. Includes furniture placement, circulation, and zone optimization.
+                    <p className="serviceContent" id="LivingRoomBedroomDesc">
+                         Your living room and bedroom are the heart and soul of your home — spaces where you relax, entertain, and unwind. At Mancherial Interiors, we specialize in crafting interiors that balance comfort, functionality, and elegance, tailored to your lifestyle.
                     </p>
-                    <a href="#" className="learnMoreBtn">Learn More</a>
+                    <a href="#" className="learnMoreBtn">Book Now</a>
                </div>
                </div>
-                              <div className="gridCol">
-                    <div className="serviceCard">
-                    <div className="serviceIcon">
-                              <img src={commercial} alt="buildings icon" width="100%"/>
-                    </div>
-                    <h3 tabIndex={1}> 
-                         Material & Finish Selection
-                    </h3>
-                    <p className="serviceContent">
-                         Choose from a curated palette of plastics, laminates, high‑grade plywood (e.g. BWP/HDHMR), tiles, and finishes that balance aesthetics, durability, and maintenance.
-                    </p>
-                    <a href="#" className="learnMoreBtn">Learn More</a>
-               </div>
-               </div>
-                              <div className="gridCol">
-                    <div className="serviceCard">
-                    <div className="serviceIcon">
-                              <img src={commercial} alt="buildings icon" width="100%"/>
-                    </div>
-                    <h3 tabIndex={1}> 
-                         Lighting Design & Colour Consultation
-                    </h3>
-                    <p className="serviceContent">
-                         Lighting and colour define mood. We design lighting schemes that highlight architecture and design, and create cohesive colour palettes to reflect your personality. 
-                    </p>
-                    <a href="#" className="learnMoreBtn">Learn More</a>
-               </div>
-               </div>
-                              <div className="gridCol">
-                    <div className="serviceCard">
-                    <div className="serviceIcon">
-                              <img src={commercial} alt="buildings icon" width="100%"/>
-                    </div>
-                    <h3 tabIndex={1}> 
-                         Custom Furniture & Accessories
-                    </h3>
-                    <p className="serviceContent">
-                      From built-in wardrobes to custom millwork, wallpaper, soft furnishings, and décor accessories—every detail is crafted or selected to complete your space.
-                    </p>
-                    <a href="#" className="learnMoreBtn">Learn More</a>
-               </div>
-               </div>
+            </div>
           </div>
-     </div>
 }
 export default Services;
