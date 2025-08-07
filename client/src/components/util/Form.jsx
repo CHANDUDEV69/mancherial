@@ -25,7 +25,7 @@ const Form = () => {
   async function formSubmitionHandler(e) {
     e.preventDefault();
     // Client-side validation
-    if (!formData.username || !formData.userPhone || !formData.userWtsp || !formData.message) {
+    if (!formData.username || !formData.userPhone || !formData.message) {
       alert("⚠️ All fields are required.");
       return;
     }
