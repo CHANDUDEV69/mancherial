@@ -4,7 +4,6 @@ const Form = () => {
   const [formData, setFormData] = useState({
     username: "",
     userPhone: "",
-    userMail: "", // Uncomment when using email field
     message: "",
   });
   const [responseStatus, setResponseStatus] = useState(false);
