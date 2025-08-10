@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Form = () => {
+  const [validMobile, setValideMobile] = useState(true);
   const [formData, setFormData] = useState({
     username: "",
     userPhone: "",
@@ -9,27 +10,43 @@ const Form = () => {
   const [responseStatus, setResponseStatus] = useState(false);
 
   function inputChangeHandler(e) {
+    if(e.target.name === "userPhone"){
+          if(userPhone.length>=10 && userPhone.length >=10){
+            setValideMobile(true);
+          }
+          else{
+            setValideMobile(false);
+          }
+    }
     setFormData((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
   }
-  function mobileValidation(e){
-    const {name , value} = e.target;
-    if(name === "userPhone" && /^[0-9]{0,10}$/.test(value)){
-      setFormData((prev) => {
-      return { ...prev, [e.target.name]: e.target.value };
-      });
-    }
+function mobileValidation(e) {
+  const { name, value } = e.target;
+  // Only accept up to 10 digits
+  if (/^\d{0,10}$/.test(value)) {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   }
+}
+
   async function formSubmitionHandler(e) {
     e.preventDefault();
-    // Client-side validation
-    if (!formData.username || !formData.userPhone || !formData.message) {
-      alert(formData.username + " " + !formData.userPhone + " " + !formData.message);
+    console.log("Submitting form with data:", formData);
+
+    if(
+      !formData.username.trim() ||
+      !formData.userPhone.trim() ||
+      !formData.message.trim()
+    ) {
+      alert("❌ Failed! All fields are required.");
       return;
     }
-
-    try {
+    if(validMobile){
+      try {
       const res = await fetch("https://backend-timx.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -42,7 +59,6 @@ const Form = () => {
         setFormData({
           username: "",
           userPhone: "",
-          userMail: "", // Reset email if needed
           message: "",
         });
         console.log(data);
@@ -55,6 +71,8 @@ const Form = () => {
       console.error("❌ Fetch failed:", err);
       alert("❌ Network error. Check your server or CORS.");
     }
+    }
+    
   }
 
   return (
@@ -79,16 +97,17 @@ const Form = () => {
             </div>
             <div className="form-control">
               <input
-                type="number"
+                type="text"
                 name="userPhone"
                 id="userPhone"
                 placeholder="Your Phone Number"
                 value={formData.userPhone}
                 onChange={mobileValidation}
-                pattern="\d{10}" 
+                pattern="\d{10}"
                 title="Phone number must be 10 digits"
                 required
               />
+              {!validMobile && <span className="errTxt">Enter Valide Number</span>}
             </div>
         
             <div className="form-control full">
