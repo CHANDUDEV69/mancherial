@@ -30,12 +30,13 @@ app.use(cors());
 
 // Routes
 app.get('/', async (req, res) => {
-  const { username, date} = req.body;
+const user = "new user";
+const date = moment().tz('Asia/kolkata').format('YYYY-MM-DD HH:mm:ss');
 
   try {
     const db = getDB();
     await db.collection("visitors").insertOne({
-      username,
+      user,
       date,
     }).then((result)=>{
       res.status(200).json({ message: "Successful" });
