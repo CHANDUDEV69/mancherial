@@ -21,8 +21,9 @@
      text-align: center;
      /* Glassmorphic background */
      background: radial-gradient(#0003, rgba(0, 0, 0, 0));
-     backdrop-filter: blur(1.5px);
-     -webkit-backdrop-filter: blur(3px);
+     background: radial-gradient(#fff0, #fff1, #fff3, #4f4f77);
+     /* backdrop-filter: blur(1.5px); */
+     /* -webkit-backdrop-filter: blur(3px); */
      z-index: 10;
 }
 

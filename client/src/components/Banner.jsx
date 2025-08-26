@@ -16,7 +16,7 @@ const Banner = () => {
                </p>
                <div className="actionControllers">
                     <a href="#projects" className="theme-btn-primary ctaButton text-theme" tabIndex={1}>View Portfolio</a>
-                    <a href="#ContactUs" className="theme-btn-primary theme-btn-primary-reverse ctaButton text-theme" tabIndex={1}>Book Consultation</a>
+                    <a href="#ContactUs" className="theme-btn-primary theme-btn-primary-reverse ctaButton text-theme" tabIndex={1}>Book  A Free Consultation</a>
 
                </div>
           </div>

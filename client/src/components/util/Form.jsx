@@ -10,14 +10,6 @@ const Form = () => {
   const [responseStatus, setResponseStatus] = useState(false);
 
   function inputChangeHandler(e) {
-    if(e.target.name === "userPhone"){
-          if(userPhone.length>=10 && userPhone.length >=10){
-            setValideMobile(true);
-          }
-          else{
-            setValideMobile(false);
-          }
-    }
     setFormData((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
@@ -26,6 +18,7 @@ function mobileValidation(e) {
   const { name, value } = e.target;
   // Only accept up to 10 digits
   if (/^\d{0,10}$/.test(value)) {
+    setValideMobile(true);
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -35,7 +28,6 @@ function mobileValidation(e) {
 
   async function formSubmitionHandler(e) {
     e.preventDefault();
-    console.log("Submitting form with data:", formData);
 
     if(
       !formData.username.trim() ||
@@ -45,7 +37,6 @@ function mobileValidation(e) {
       alert("❌ Failed! All fields are required.");
       return;
     }
-    if(validMobile){
       try {
       const res = await fetch("https://backend-timx.onrender.com/contact", {
         method: "POST",
@@ -71,7 +62,7 @@ function mobileValidation(e) {
       console.error("❌ Fetch failed:", err);
       alert("❌ Network error. Check your server or CORS.");
     }
-    }
+
     
   }
 

@@ -16,7 +16,7 @@ const Blogs = () => {
                     </div>
                     <div className="cardContent">
                          <p>
-                             Discover the latest styles making homes in Mancherial more modern, efficient, and elegant — from smart storage to natural textures and lighting.
+                              Interior design in 2025 is all about personalization, sustainability, and functionality. For homeowners in Suryanagar and across the city, the demand for stylish yet practical spaces is growing rapidly ...
                          </p>
                     </div>
                     <div className="cardQuote">
@@ -35,7 +35,7 @@ const Blogs = () => {
                     </div>
                     <div className="cardContent">
                          <p>
-                              Explore clever layouts, multifunctional furniture, and design hacks we use to transform compact homes into spacious sanctuaries.
+                              Designing a 2BHK apartment in Mancherial can be a big challenge, especially when space is limited. Most 2BHK homes have smaller bedrooms, a compact kitchen, and a small living room ...
                          </p>
                     </div>
                     <div className="cardQuote">
@@ -53,7 +53,7 @@ const Blogs = () => {
                     </div>
                     <div className="cardContent">
                          <p>
-                              Learn how we blend local traditions, pooja spaces, and regional art into modern home designs that feel personal and timeless.
+                          Your home is more than just walls and furniture—it’s a place where you create memories and feel comfortable. In Mancherial, many families are now choosing modern interior designs because they make homes look stylish and ...
                          </p>
                     </div>
                     <div className="cardQuote">
