@@ -38,7 +38,7 @@ function mobileValidation(e) {
       return;
     }
       try {
-      const res = await fetch("https://backend-timx.onrender.com/contact", {
+      const res = await fetch("https://mancherial.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

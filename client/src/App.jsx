@@ -2,10 +2,29 @@ import './App.css'
 import Modal from './components/util/Modal';
 import Header from './components/Header'
 import Footer from './components/Footer'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom'
 function App() {
+    const [visitorData, setVisitorData] = useState({name: "New User", date: new Date().getDate()});
     const [isModalOpen, setIsModalOpen] = useState(false);
+    useEffect(()=>{
+            const visitorUpdate = async () =>{
+      try{
+        const res = await fetch("https://mancherial.onrender.com/", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        // body: JSON.stringify(visitorData),
+        });
+      }
+      catch(err){
+        console.log(err)
+      }
+
+      }
+      if(isModalOpen){
+        visitorUpdate();
+      }
+    })
 return (
     <div className='App' onLoad={() => setTimeout(()=>{
         setIsModalOpen(true)
