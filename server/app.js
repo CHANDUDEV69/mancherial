@@ -29,10 +29,27 @@ app.use(cors());
 
 
 // Routes
-app.get('/', (req, res) => {
-  res.json({ message: 'API working!' });
-});
+app.get('/', async (req, res) => {
+  const { username, date} = req.body;
 
+  try {
+    const db = getDB();
+    await db.collection("visitors").insertOne({
+      username,
+      date,
+    }).then((result)=>{
+      res.status(200).json({ message: "Successful" });
+    }).catch((err)=>{
+      console.log(err)
+    });
+
+
+  } catch (err) {
+    console.error("❌ Insert error:", err.message);
+    res.status(500).json({ error: "Database insert failed" });
+  }
+
+});
 app.post('/contact', async (req, res) => {
   const { username, userPhone, userWtsp, message } = req.body;
 
@@ -46,7 +63,6 @@ app.post('/contact', async (req, res) => {
     await db.collection("users").insertOne({
       username,
       userPhone,
-      userWtsp,
       message,
       submittedAt: dateIST,
     }).then((result)=>{
@@ -61,6 +77,7 @@ app.post('/contact', async (req, res) => {
     res.status(500).json({ error: "Database insert failed" });
   }
 });
+
 
 // Start server
 app.listen(PORT, () => {
