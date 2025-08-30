@@ -20,7 +20,7 @@ const Blogs = () => {
                          </p>
                     </div>
                     <div className="cardQuote">
-                         <div className="learnMoreBtn">Read  More</div>
+                         <a className="learnMoreBtn" href="/1">Read  More</a>
                     </div>
     
                     </div>
@@ -39,7 +39,7 @@ const Blogs = () => {
                          </p>
                     </div>
                     <div className="cardQuote">
-                         <div className="learnMoreBtn">Read  More</div>
+                         <a href="2" className="learnMoreBtn">Read  More</a>
                     </div>
                </div>
                </div>
@@ -57,7 +57,7 @@ const Blogs = () => {
                          </p>
                     </div>
                     <div className="cardQuote">
-                         <div className="learnMoreBtn">Read  More</div>
+                         <a href="3" className="learnMoreBtn">Read  More</a>
                     </div>
                     </div>
                </div>
