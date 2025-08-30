@@ -2,6 +2,7 @@ import "./Blogs.css"
 import blogImg1 from "../assets/projects/residential/img1.jpg"
 import blogImg2 from "../assets/projects/residential/img2.jpg"
 import blogImg3 from "../assets/projects/residential/img9.jpg"
+import { Link } from "react-router-dom"
 const Blogs = () => {
      return <div className="Blogs section-padding" id="blogs">
           <h2 tabIndex={1}>Blogs</h2>
@@ -20,7 +21,7 @@ const Blogs = () => {
                          </p>
                     </div>
                     <div className="cardQuote">
-                         <a className="learnMoreBtn" href="/1">Read  More</a>
+                         <Link to="/1" className="learnMoreBtn">Read  More</Link>
                     </div>
     
                     </div>
@@ -39,7 +40,7 @@ const Blogs = () => {
                          </p>
                     </div>
                     <div className="cardQuote">
-                         <a href="2" className="learnMoreBtn">Read  More</a>
+                         <Link to="/2" className="learnMoreBtn">Read  More</Link>
                     </div>
                </div>
                </div>
@@ -57,7 +58,7 @@ const Blogs = () => {
                          </p>
                     </div>
                     <div className="cardQuote">
-                         <a href="3" className="learnMoreBtn">Read  More</a>
+                         <Link to="/3" className="learnMoreBtn">Read  More</Link>
                     </div>
                     </div>
                </div>
