@@ -33,7 +33,7 @@ const Banner = () => {
           
           <div className="contactIcons">
                <div className="phone contactIcon">
-                    <a href="tel:+91 9985599039">
+                    <a href="tel:+91 79895 83538">
                          <img src={telephone} alt="" />
                     </a>
                </div>
