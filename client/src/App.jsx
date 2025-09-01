@@ -5,7 +5,6 @@ import Footer from './components/Footer'
 import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom'
 function App() {
-    const [visitorData, setVisitorData] = useState({name: "New User", date: new Date().getDate()});
     const [isModalOpen, setIsModalOpen] = useState(false);
     useEffect(()=>{
             const visitorUpdate = async () =>{

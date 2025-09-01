@@ -1,24 +1,64 @@
 .Section-Banner{
+     position: relative;
+     width: 100%;
      margin-top: 90px;
      background-image: url("../assets/bannerbg.jpg");
-     height: 510px;
+     height: 360px;
      background-size: cover;
      background-position: center;
-     display: flex;
+     justify-items: center;
+     align-content: center;
+     overflow: hidden;
 }
-.SBContent{
-     max-width: 660px;
-     height: max-content;
-     margin: auto;
+.Section-Banner::before{
+     position: absolute;
+     content: '';
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to right, hsl(259deg 94% 51% / 84%));
+}
+.banner_content{
+     position: relative;
      text-align: center;
-     background-color: #0009;
-     background-image: radial-gradient(#0000, #0003);
-     padding: 3rem;
-     border-radius: 0.9rem;
-     /* border: 1px solid #fff; */
+     color: #fff;
+     width: max-content;
 }
-.SBContent h3{
-     margin-bottom: 0.6rem;
+.banner_content h1{
+     font-weight: bold;
+}
+.actionController{
+     display: flex;
+     gap: 12px;
+     width: max-content;
+     margin-top: 1.6rem;
+     margin-inline: auto;
+}
+.actionController a{
+     color: #fff;     
+     padding: 0.6rem 0.9rem;
+     border-radius: 3px;
+     background:  hsla(259, 50%, 66%, 0.212);
+     border: 1px solid #ccc7;
+     display: flex;
+     gap: 6px;
+     font-weight: 700;
+}
+.banner_content .banner_subtitle{
+     font-size: 1rem;
+     font-size: clamp(1rem,1.8vw, 1.8rem);
+     font-weight: 500;
+     margin-top: 0.6rem;
+     color: #fffc;
+}
+.banner_paragraph{
+     /* border: 3px solid red; */
+     margin-inline: auto;
+     width: 80%;
+     font-size: clamp(0.9rem,1.2vw, 1.5rem);
+     margin-top: 0.6rem;
+     color: #fffc;
 }
 .ctaButton{
      margin-top: 1.8rem;

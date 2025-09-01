@@ -25,6 +25,69 @@
           transform: scale(1.05);
      }
 }
+.locations{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 1.2rem;
+     margin-top: 1.8rem;
+}
+.cities h3{
+     font-weight: 700;
+}
+.locations .locationInfoCard{
+     border: 3px solid #604acb57;
+     border-radius: 6px;
+     padding: 1.2rem;
+     box-shadow: 0px 0px 3px #ccc9;
+}
+.locationInfoCardHeader{
+     display: flex;
+     justify-content: space-between;
+}
+.loc_header_content{
+     /* border: 1px solid red; */
+}
+.loc_header_badge{
+     color: var(--primary-color);
+     font-weight: 600;
+}
+.location_area_info{
+     color: #000c;
+}
+.location_services{
+     margin-top: 0.6rem;
+
+}
+.services_list{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+     gap: 9px;
+     margin-top: 0.6rem;
+}
+.services_list .service_item{
+     display: inline;
+     background: #ccc9;
+     color: var(--primary-color);
+     font-weight: 600;
+     padding: 0.3rem 0.6rem;
+     border-radius: 30px;
+     white-space: nowrap;
+}
+.contact_info_card{
+     border-top: 1px dotted #ccc;
+     margin-top: 0.9rem;
+     padding-top: 0.9rem;
+}
+.contact_info_card .contact_info{
+     margin-bottom: 6px;
+}
+.cities h3 b{
+     color: var(--primary-color)
+}
+.locationParagraph{
+     margin-top: 0.6rem;
+     color: #000c;
+}
 .citiesList .city img{
      transition: 0.3s ease-in;
      width: 100%;
@@ -38,4 +101,23 @@
      font-size: 1.2rem;
      background: var(--primary-color);
      backdrop-filter: blur(1.2px);
+}
+.locationActionControllers{
+     display: flex;
+     gap: 0.9rem;
+     margin-top: 0.9rem;
+}
+.actionBtn{
+     padding: 5px 9px;
+     border: 1px solid #ccc;
+     border-radius: 3px;
+}
+.actionBtn1{
+     background: var(--primary-color);
+     color: #fff;
+}
+@media screen and (max-width: 719px) {
+     .locations{
+          grid-template-columns: 1fr;
+     }
 }
